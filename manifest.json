@@ -5,7 +5,7 @@
   "description": "Add some generic enhancements for Commishes and it's subdomains.",
   "homepage_url": "https://voxelfox.co.uk",
   "icons": {
-    "128": "icons/ghost.png"
+    // "128": "icons/ghost.png"
   },
   "content_scripts": [
     {
