@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
+
+    <style>
+      body {
+        font-family: "Century Gothic", sans-serif;
+        margin: 20px;
+      }
+      label {
+        margin-right: 10px;
+      }
+      button {
+        font-family: inherit;
+        font-weight: bold;
+        padding: 0.2em 0.5em;
+        font-size: 1.05rem;
+      }
+      textarea {
+        margin-top: 1em;
+        resize: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .option:not(:first-of-type) {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+
+      <div class="option">
+        <label>Which users would you like to filter?</label>
+        <div>
+          <textarea id="filtered-users" name="filtered-users"></textarea>
+        </div>
+      </div>
+
+      <div class="option">
+        <label>Hide entirely, or just dim filtered listings?</label>
+        <div>
+          <select id="filter-mode" name="filter-mode">
+            <option value="hide">Hide entirely</option>
+            <option value="dim">Dim listings</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="option">
+        <button type="submit">Save changes</button>
+      </div>
+
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>
