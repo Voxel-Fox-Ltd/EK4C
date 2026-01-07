@@ -16,6 +16,7 @@
         "lib/helpers.js",
         "lib/ych-category.js",
         "lib/ych-auction.js",
+        "lib/ych-user.js",
         "ek4c.js"
       ]
     }
