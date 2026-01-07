@@ -11,5 +11,6 @@ A small extension with tools to enhance your Commishes experience.
 * Simple QOL features
     * The "report listing" button is now present on mobile.
     * User filter and highlight buttons are available on both auctions and user pages.
+    * Quick-switch between safety levels without going to your user settings.
 
 ## Images

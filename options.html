@@ -44,6 +44,18 @@
     <form>
 
       <div class="option">
+        <label>Maximum safety level to show?</label>
+        <div>
+          <select id="safe-mode" name="safe-mode">
+            <option value="0">Safe</option>
+            <option value="1">Questionable</option>
+            <option value="2">Explicit</option>
+            <option value="3">Shock</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="option">
         <label>Which users would you like to highlight?</label>
         <div>
           <textarea id="highlighted-users" name="highlighted-users" rows=16></textarea>
@@ -67,9 +79,9 @@
         </div>
       </div>
 
-      <div class="option">
+      <!-- <div class="option">
         <button type="submit">Save changes</button>
-      </div>
+      </div> -->
 
     </form>
     <script src="options.js"></script>
