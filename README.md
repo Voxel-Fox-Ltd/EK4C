@@ -14,3 +14,7 @@ A small extension with tools to enhance your Commishes experience.
     * Quick-switch between safety levels without going to your user settings.
 
 ## Images
+
+![A screenshot showing an auction listing with a yellow border.](images/highlighted-user.png)
+![A screenshot showing an auction listing with major transparency.](images/filtered-user.png)
+![A screenshot showing the options page for the extension.](images/options-page.png)
