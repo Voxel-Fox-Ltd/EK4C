@@ -1,5 +1,6 @@
 async function saveOptions() {
     await browser.storage.sync.set({
+        colourScheme: document.querySelector("#colour-scheme").value,
         safeMode: document.querySelector("#safe-mode").value,
         highlightedUsers: document.querySelector("#highlighted-users").value.trim().split("\n").map(s => s.trim()).filter(s => s.length > 0),
         filteredUsers: document.querySelector("#filtered-users").value.trim().split("\n").map(s => s.trim()).filter(s => s.length > 0),
@@ -8,6 +9,8 @@ async function saveOptions() {
 }
 
 async function restoreOptions() {
+    let colourScheme = await browser.storage.sync.get("colourScheme");
+    document.querySelector("#colour-scheme").value = colourScheme.colourScheme || "L";
     let safeMode = await browser.storage.sync.get("safeMode");
     document.querySelector("#safe-mode").value = safeMode.safeMode || "3";
     let highlightedUsers = await browser.storage.sync.get("highlightedUsers");
@@ -19,6 +22,7 @@ async function restoreOptions() {
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
+document.getElementById("colour-scheme").addEventListener("input", saveOptions)
 document.getElementById("safe-mode").addEventListener("input", saveOptions)
 document.getElementById("highlighted-users").addEventListener("input", saveOptions)
 document.getElementById("filtered-users").addEventListener("input", saveOptions)

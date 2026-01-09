@@ -1,3 +1,14 @@
+async function loadColourScheme() {
+    let result = await browser.storage.sync.get("colourScheme");
+    let scheme = result.colourScheme || "L";
+    // document.documentElement.setAttribute("data-colour-scheme", scheme);
+    if(scheme == "D") {
+        document.documentElement.classList.add("dark");
+    }
+}
+loadColourScheme();
+
+
 if(window.location.hostname == "ych.commishes.com") {
     if(window.location.pathname.startsWith("/category/")) {
         console.log("Starting EK4C on ych.commishes.com/category");
