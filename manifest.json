@@ -17,22 +17,30 @@
         "lib/ych-category.js",
         "lib/ych-auction.js",
         "lib/ych-user.js",
+        "lib/ych.js",
         "ek4c.js"
       ]
     }
   ],
   "action": {
     "default_title": "EK4C Options",
-    "default_popup": "options.html"
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "permissions": [
     "storage"
   ],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "background.js"
+    ],
+  },
   "host_permissions": [
-    "https://ych.commishes.com/",
-    "https://ping.commishes.com/",
-    "https://loot.commishes.com/",
-    "https://portfolio.commishes.com/"
+    "*://*.commishes.com/*"
   ],
   "browser_specific_settings": {
     "gecko": {
