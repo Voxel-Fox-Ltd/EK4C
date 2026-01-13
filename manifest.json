@@ -37,7 +37,7 @@
     "service_worker": "background.js",
     "scripts": [
       "background.js"
-    ],
+    ]
   },
   "host_permissions": [
     "*://*.commishes.com/*"
