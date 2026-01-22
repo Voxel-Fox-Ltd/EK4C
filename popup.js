@@ -1,7 +1,13 @@
-const api = globalThis.browser ?? globalThis.chrome;
+var api;
+if (typeof browser !== "undefined") {
+    api = browser;
+} else {
+    api = chrome;
+}
+
 
 document.getElementById("openOptions").addEventListener("click", async () => {
-  // Works in Firefox and Chrome
-  await api.runtime.openOptionsPage();
-  window.close();
+    // Works in Firefox and Chrome
+    await api.runtime.openOptionsPage();
+    window.close();
 });

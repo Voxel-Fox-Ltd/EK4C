@@ -1,3 +1,11 @@
+var api;
+if (typeof browser !== "undefined") {
+    api = browser;
+} else {
+    api = chrome;
+}
+
+
 async function exportSettings() {
     let settings = await saveOptions();
     let json = JSON.stringify(settings, null, 2);
@@ -33,20 +41,20 @@ async function saveOptions(settings=null) {
         }
     }
     console.log("Saving settings", settings)
-    await browser.storage.sync.set(settings);
+    await api.storage.sync.set(settings);
     return settings;
 }
 
 async function restoreOptions() {
-    let colourScheme = await browser.storage.sync.get("colourScheme");
+    let colourScheme = await api.storage.sync.get("colourScheme");
     document.querySelector("#colour-scheme").value = colourScheme.colourScheme || "L";
-    let safeMode = await browser.storage.sync.get("safeMode");
+    let safeMode = await api.storage.sync.get("safeMode");
     document.querySelector("#safe-mode").value = safeMode.safeMode || "3";
-    let highlightedUsers = await browser.storage.sync.get("highlightedUsers");
+    let highlightedUsers = await api.storage.sync.get("highlightedUsers");
     document.querySelector("#highlighted-users").value = (highlightedUsers.highlightedUsers || []).join("\n");
-    let filteredUsers = await browser.storage.sync.get("filteredUsers");
+    let filteredUsers = await api.storage.sync.get("filteredUsers");
     document.querySelector("#filtered-users").value = (filteredUsers.filteredUsers || []).join("\n");
-    let filterMode = await browser.storage.sync.get("filterMode");
+    let filterMode = await api.storage.sync.get("filterMode");
     document.querySelector("#filter-mode").value = filterMode.filterMode || "hide";
 }
 

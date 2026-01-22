@@ -1,7 +1,16 @@
 console.log("EK4C running");
 
+
+var api;
+if (typeof browser !== "undefined") {
+    api = browser;
+} else {
+    api = chrome;
+}
+
+
 async function loadColourScheme() {
-    let result = await browser.storage.sync.get("colourScheme");
+    let result = await api.storage.sync.get("colourScheme");
     let scheme = result.colourScheme || "L";
     if(scheme == "D") {
         document.documentElement.classList.add("dark");
