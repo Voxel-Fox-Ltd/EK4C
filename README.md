@@ -9,6 +9,7 @@ A small extension with tools to enhance your Commishes experience.
     * Implementations for:
         * ych.commishes.com
         * ping.commishes.com
+        * loot.commishes.com
 * User highlighting in auction pages
     * Someone you particularly like? Want to keep track of their auctions from the main auction page? When set up, their listings will be highlighted with a colored border, making them easy to spot.
 * User filtering in auction pages

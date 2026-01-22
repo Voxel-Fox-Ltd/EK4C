@@ -39,6 +39,9 @@ if(window.location.hostname == "ych.commishes.com") {
 else if(window.location.hostname == "ping.commishes.com") {
     setupPingCSS();
 }
+else if(window.location.hostname == "loot.commishes.com") {
+    setupLootCSS();
+}
 else if(window.location.hostname == "account.commishes.com") {
     setupGeneralTailwindCSS();  // nothing special for the account page
 }
