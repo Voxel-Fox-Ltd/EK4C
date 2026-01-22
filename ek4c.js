@@ -1,4 +1,4 @@
-console.log("EK4C running");
+console.log("EK4C loaded");
 
 
 var api;
@@ -38,6 +38,9 @@ if(window.location.hostname == "ych.commishes.com") {
 }
 else if(window.location.hostname == "ping.commishes.com") {
     setupPingCSS();
+}
+else if(window.location.hostname == "account.commishes.com") {
+    setupGeneralTailwindCSS();  // nothing special for the account page
 }
 else {
     console.log("EK4C: Not on a supported site, doing nothing.");

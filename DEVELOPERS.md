@@ -1,0 +1,20 @@
+# Colours
+
+* Body
+    * slate-50
+    * dark-slate-900
+* Nav
+    * bg-white
+    * dark:bg-gray-800
+    * border-gray-100
+    * dark:border-gray-900
+* Tabs
+    * dark:text-white
+* Footer
+    * bg-white
+    * text-gray-600
+    * dark:bg-black
+    * dark:text-gray-400
+    * border-none
+    * border-t-gray-300
+    * dark:border-t-gray-800

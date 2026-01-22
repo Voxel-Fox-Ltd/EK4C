@@ -19,6 +19,9 @@
         "lib/ych-user.js",
         "lib/ych.js",
         "ek4c.js"
+      ],
+      "css": [
+        "lib/tailwind.css"
       ]
     }
   ],
