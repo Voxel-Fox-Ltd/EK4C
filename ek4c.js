@@ -23,8 +23,8 @@ function toggleDarkMode() {
     document.documentElement.classList.toggle("dark");
 }
 addEventListener("keydown", function(event) {
-    event.preventDefault();
     if(event.ctrlKey && event.shiftKey && event.key === "D") {
+        event.preventDefault();
         toggleDarkMode();
     }
 });
