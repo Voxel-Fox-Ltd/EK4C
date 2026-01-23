@@ -19,6 +19,17 @@ async function loadColourScheme() {
 loadColourScheme();
 
 
+function toggleDarkMode() {
+    document.documentElement.classList.toggle("dark");
+}
+addEventListener("keydown", function(event) {
+    event.preventDefault();
+    if(event.ctrlKey && event.shiftKey && event.key === "D") {
+        toggleDarkMode();
+    }
+});
+
+
 if(window.location.hostname == "ych.commishes.com") {
     setupYCHCSS();
     if(window.location.pathname.startsWith("/category/")) {

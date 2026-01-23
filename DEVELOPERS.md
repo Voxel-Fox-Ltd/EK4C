@@ -10,6 +10,8 @@
     * dark:border-gray-900
 * Tabs
     * dark:text-white
+* Items
+    * dark:bg-slate-800
 * Footer
     * bg-white
     * text-gray-600
