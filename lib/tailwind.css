@@ -203,6 +203,8 @@
 .dark .dark\:bg-gray-900 { --tw-bg-opacity: 1; background-color: rgb(17 24 39 / var(--tw-bg-opacity)); }
 .dark .dark\:bg-gray-950 { --tw-bg-opacity: 1; background-color: rgb(3 7 18 / var(--tw-bg-opacity)); }
 
+.dark .dark\:hover\:bg-gray-950:hover { --tw-bg-opacity: 1; background-color: rgb(3 7 18 / var(--tw-bg-opacity)); }  /* I only use this one */
+
 .dark .dark\:border-gray-50  { --tw-border-opacity: 1; border-color: rgb(249 250 251 / var(--tw-border-opacity)); }
 .dark .dark\:border-gray-100 { --tw-border-opacity: 1; border-color: rgb(243 244 246 / var(--tw-border-opacity)); }
 .dark .dark\:border-gray-200 { --tw-border-opacity: 1; border-color: rgb(229 231 235 / var(--tw-border-opacity)); }
