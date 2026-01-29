@@ -35,6 +35,7 @@ async function saveOptions(settings=null) {
         settings = {
             colourScheme: document.querySelector("#colour-scheme").value,
             safeMode: document.querySelector("#safe-mode").value,
+            sortMode: document.querySelector("#sort-mode").value,
             highlightedUsers: document.querySelector("#highlighted-users").value.trim().split("\n").map(s => s.trim()).filter(s => s.length > 0),
             filteredUsers: document.querySelector("#filtered-users").value.trim().split("\n").map(s => s.trim()).filter(s => s.length > 0),
             filterMode: document.querySelector("#filter-mode").value
@@ -50,6 +51,8 @@ async function restoreOptions() {
     document.querySelector("#colour-scheme").value = colourScheme.colourScheme || "L";
     let safeMode = await api.storage.sync.get("safeMode");
     document.querySelector("#safe-mode").value = safeMode.safeMode || "3";
+    let sortMode = await api.storage.sync.get("sortMode");
+    document.querySelector("#sort-mode").value = sortMode.sortMode || "r";
     let highlightedUsers = await api.storage.sync.get("highlightedUsers");
     document.querySelector("#highlighted-users").value = (highlightedUsers.highlightedUsers || []).join("\n");
     let filteredUsers = await api.storage.sync.get("filteredUsers");
@@ -62,6 +65,7 @@ restoreOptions();
 
 document.getElementById("colour-scheme").addEventListener("input", () => {saveOptions(null)})
 document.getElementById("safe-mode").addEventListener("input", () => {saveOptions(null)})
+document.getElementById("sort-mode").addEventListener("input", () => {saveOptions(null)})
 document.getElementById("highlighted-users").addEventListener("input", () => {saveOptions(null)})
 document.getElementById("filtered-users").addEventListener("input", () => {saveOptions(null)})
 document.getElementById("filter-mode").addEventListener("input", () => {saveOptions(null)})

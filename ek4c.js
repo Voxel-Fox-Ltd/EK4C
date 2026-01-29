@@ -32,7 +32,10 @@ addEventListener("keydown", function(event) {
 
 if(window.location.hostname == "ych.commishes.com") {
     setupYCHCSS();
-    if(window.location.pathname.startsWith("/category/")) {
+    if(window.location.pathname == "/") {
+        YCHCategory.setupTabs();
+    }
+    else if(window.location.pathname.startsWith("/category/")) {
         console.log("Starting EK4C on ych.commishes.com/category");
         YCHCategory.setup().then(() => {
             YCHCategory.main();
@@ -40,6 +43,7 @@ if(window.location.hostname == "ych.commishes.com") {
     }
     else if(window.location.pathname.startsWith("/auction/")) {
         console.log("Starting EK4C on ych.commishes.com/auction");
+        YCHCategory.setupTabs()
         YCHAuction.setup();
     }
     else if(window.location.pathname.startsWith("/user/")) {
