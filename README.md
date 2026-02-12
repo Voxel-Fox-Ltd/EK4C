@@ -19,6 +19,8 @@ A small extension with tools to enhance your Commishes experience.
     * User filter and highlight buttons are available on both auctions and user pages.
     * Quick-switch between safety levels without going to your user settings.
     * Add Loot link to user pages.
+    * Add default sort mode for categories.
+    * Add original auction end timestamp.
 
 ## Images
 
