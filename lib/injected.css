@@ -1,0 +1,9 @@
+.promoted .promoted {
+    padding: 2px 4px;
+    border-radius: 0 8px 0 5px;
+}
+
+.promoted .sale {
+    padding: 2px 12px;
+    border-radius: 8px 0 5px 0;
+}

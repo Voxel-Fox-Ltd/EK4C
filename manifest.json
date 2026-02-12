@@ -21,6 +21,7 @@
         "ek4c.js"
       ],
       "css": [
+        "lib/injected.css",
         "lib/tailwind.css"
       ]
     }
