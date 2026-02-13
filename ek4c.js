@@ -50,6 +50,16 @@ if(window.location.hostname == "ych.commishes.com") {
         console.log("Starting EK4C on ych.commishes.com/user");
         YCHUser.setup();
     }
+    else if(window.location.pathname.startsWith("/report/")) {
+        console.log("Starting EK4C on ych.commishes.com/report");
+        for(let m of document.querySelectorAll(".material")) {
+            // When you make a report, the site adds a "material" div which has an inbuilt colour.
+            // As far as I can tell, this is the only time that this happens on the entire website.
+            // Remove the material class and add some Tailwind classes to make it look better in
+            // dark mode, and reasonable in light mode.
+            m.className = "border rounded border-gray-200 p-4 dark:border-gray-800";
+        }
+    }
 }
 else if(window.location.hostname == "ping.commishes.com") {
     setupPingCSS();
